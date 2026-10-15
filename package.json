@@ -1,0 +1,28 @@
+{
+  "name": "microrena",
+  "version": "1.0.0",
+  "description": "micro arena for your llms right in the terminal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeevJewalkar/microrena.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NeevJewalkar/microrena/issues"
+  },
+  "homepage": "https://github.com/NeevJewalkar/microrena#readme",
+  "dependencies": {
+    "boxen": "^9.0.0",
+    "chalk": "^6.0.1",
+    "openai": "^7.34.0"
+  },
+  "bin": {
+    "microrena": "./src/index.js"
+  },
+  "type": "module"
+}
