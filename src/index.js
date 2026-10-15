@@ -100,7 +100,7 @@ const listSources = () => {
     const sources = loadSources();
 
     if (sources.length === 0) {
-        console.log('No sources configured. Run `node index.js add`.');
+        console.log('No sources configured. Run `microrena add`.');
         return;
     }
 
@@ -120,7 +120,7 @@ const listSources = () => {
 
 const removeSource = (name) => {
     if (!name) {
-        console.log('Usage: node index.js remove <source-name>');
+        console.log('Usage: microrena remove <source-name>');
         process.exitCode = 1;
         return;
     }
@@ -142,7 +142,7 @@ const removeSource = (name) => {
 
 const runBenchmark = async (prompt) => {
     if (!prompt?.trim()) {
-        console.log('Usage: node index.js run "your prompt"');
+        console.log('Usage: microrena run "your prompt"');
         process.exitCode = 1;
         return;
     }
@@ -150,7 +150,7 @@ const runBenchmark = async (prompt) => {
     const sources = loadSources();
 
     if (sources.length === 0) {
-        console.log('No sources configured. Run `node index.js add`.');
+        console.log('No sources configured. Run `microrena add`.');
         return;
     }
 
@@ -255,7 +255,7 @@ const main = async () => {
             break;
 
         default:
-            // Backward compatibility: node index.js "hello"
+            // Backward compatibility: microrena "hello"
             await runBenchmark([command, ...args].join(' '));
     }
 };
